@@ -1,0 +1,18 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Build') {
+            steps {
+                echo "Building dev branch code 🛠️"
+            }
+        }
+
+        stage('Test') {
+            steps {
+                echo "Running dev tests ⚡"
+            }
+        }
+    }
+}
+

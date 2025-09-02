@@ -1,0 +1,18 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Build') {
+            steps {
+                echo "Building production code from main branch 🚀"
+            }
+        }
+
+        stage('Test') {
+            steps {
+                echo "Running production tests ✅"
+            }
+        }
+    }
+}
+
