@@ -1,17 +1,11 @@
 pipeline {
     agent any
-
     stages {
         stage('Build') {
-            steps {
-                echo "🚀 Building PRODUCTION code from branch: ${env.BRANCH_NAME}"
-            }
+            steps { echo "🛠️ Building DEVELOPMENT code from ${env.BRANCH_NAME}" }
         }
-
         stage('Test') {
-            steps {
-                echo "✅ Running PRODUCTION tests on branch: ${env.BRANCH_NAME}"
-            }
+            steps { echo "⚡ Running DEVELOPMENT tests on ${env.BRANCH_NAME}" }
         }
     }
 }
