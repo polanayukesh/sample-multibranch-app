@@ -4,13 +4,13 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo "Building production code from main branch 🚀"
+                echo "Building branch ${env.BRANCH_NAME} 🚀"
             }
         }
 
         stage('Test') {
             steps {
-                echo "Running production tests ✅"
+                echo "Running tests on branch ${env.BRANCH_NAME} ✅"
             }
         }
     }
